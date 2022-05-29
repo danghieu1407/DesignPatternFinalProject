@@ -54,12 +54,27 @@ namespace DesignPatternMidterm.View
                 btnOrder.Enabled = true;
                 btnKitchen.Enabled = true;
                 btnManage.Enabled = true;
+                btnManagerStaff.Enabled = true;
+                btnTable.Enabled = true;
+                btnManage.Enabled = true;
+            } else if(temp == 2)
+            {
+                btnOrder.Enabled = true;
+                btnKitchen.Enabled = true;
+                btnManage.Enabled = true;
+                btnManagerStaff.Enabled = true;
+                btnTable.Enabled = true;
+                btnManage.Hide();
+
             }
             else if (temp == 1)
             {
                 //hide button
                 btnOrder.Enabled = true;
                 btnKitchen.Enabled = true;
+                btnManage.Enabled = true;
+                btnManagerStaff.Hide();
+                btnTable.Enabled = true;
                 btnManage.Hide();
 
             }
@@ -67,6 +82,9 @@ namespace DesignPatternMidterm.View
             {
                 btnOrder.Enabled = true;
                 btnKitchen.Hide();
+                btnManage.Hide();
+                btnManagerStaff.Hide();
+                btnTable.Hide();
                 btnManage.Hide();
             }
 

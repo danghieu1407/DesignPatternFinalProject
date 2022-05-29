@@ -55,7 +55,7 @@ namespace Demo.View
         string getRoleName(string param)
         {
           
-            if (param == "1")
+            if (param == "3")
             {
                 return "Admin";
             }
