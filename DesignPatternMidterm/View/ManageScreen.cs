@@ -136,5 +136,7 @@ namespace DesignPatternMidterm.View
             manage.ShowDialog();
             this.Show();
         }
+
+        
     }
 }

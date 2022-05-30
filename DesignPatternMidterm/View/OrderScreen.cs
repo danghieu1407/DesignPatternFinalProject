@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DesignPatternMidterm.Controller.DecoratorPattern.ChickenDecorator;
 using DesignPatternMidterm.Controller.DecoratorPattern.MilkTeaDecorator;
 using DesignPatternMidterm.Controller.CommandPattern;
+using DesignPatternMidterm.Controller.BuilderPattern;
 
 namespace DesignPatternMidterm.View
 {
@@ -353,6 +354,84 @@ namespace DesignPatternMidterm.View
                     dongia.Add(garanphomaikhoaiay.Cost() * parsedValue);
                     price = garanphomaikhoaiay.Cost() * parsedValue;
                 }
+                else if (xoaiMixDau.Checked && m.Checked && tuoi.Checked)
+                { 
+                    pickFood.Text = pickFood.Text + "Mingsu xoài mix dâu size M loại tươi";
+                    dongia.Add(103000 * parsedValue);
+                    price = 1003000 * parsedValue;
+                }
+                else if (xoaiMixDau.Checked && l.Checked && tuoi.Checked)
+                {
+
+                    pickFood.Text = pickFood.Text + "Mingsu xoài mix dâu size L loại tươi";
+                    dongia.Add(101000 * parsedValue);
+                    price = 1010000 * parsedValue;
+                }
+                else if (xoaiMixDau.Checked && m.Checked && dac.Checked)
+                {
+                    pickFood.Text = pickFood.Text + "Mingsu xoài mix dâu size M loại đặc";
+                    dongia.Add(102000 * parsedValue);
+                    price = 1020000 * parsedValue;
+                }
+                else if (xoaiMixDau.Checked && l.Checked && dac.Checked)
+                {
+                    pickFood.Text = pickFood.Text + "Mingsu xoài mix dâu size L loại đặc";
+                    dongia.Add(102000 * parsedValue);
+                    price = 102000 * parsedValue;
+
+                }    else if (xoaiMixDau.Checked && m.Checked && tuoi.Checked)
+                { 
+                    pickFood.Text = pickFood.Text + "Mingsu xoài mix dâu size M loại tươi";
+                    dongia.Add(103000 * parsedValue);
+                    price = 1003000 * parsedValue;
+                }
+                else if (xoaiMixDau.Checked && l.Checked && tuoi.Checked)
+                {
+
+                    pickFood.Text = pickFood.Text + "Mingsu xoài mix dâu size L loại tươi";
+                    dongia.Add(101000 * parsedValue);
+                    price = 1010000 * parsedValue;
+                }
+                else if (xoaiMixDau.Checked && m.Checked && dac.Checked)
+                {
+                    pickFood.Text = pickFood.Text + "Mingsu xoài mix dâu size M loại đặc";
+                    dongia.Add(102000 * parsedValue);
+                    price = 1020000 * parsedValue;
+                }
+                else if (xoaiMixDau.Checked && l.Checked && dac.Checked)
+                {
+                    pickFood.Text = pickFood.Text + "Mingsu xoài mix dâu size L loại đặc";
+                    dongia.Add(102000 * parsedValue);
+                    price = 102000 * parsedValue;
+
+                }
+                /////
+                else if (nhoMixDau.Checked && m.Checked && tuoi.Checked)
+                {
+                    pickFood.Text = pickFood.Text + "Mingsu nho mix dâu size M loại tươi";
+                    dongia.Add(103000 * parsedValue);
+                    price = 1003000 * parsedValue;
+                }
+                else if (nhoMixDau.Checked && l.Checked && tuoi.Checked)
+                {
+
+                    pickFood.Text = pickFood.Text + "Mingsu nho mix dâu size L loại tươi";
+                    dongia.Add(101000 * parsedValue);
+                    price = 1010000 * parsedValue;
+                }
+                else if (nhoMixDau.Checked && m.Checked && dac.Checked)
+                {
+                    pickFood.Text = pickFood.Text + "Mingsu nho mix dâu size M loại đặc";
+                    dongia.Add(102000 * parsedValue);
+                    price = 1020000 * parsedValue;
+                }
+                else if (nhoMixDau.Checked && l.Checked && dac.Checked)
+                {
+                    pickFood.Text = pickFood.Text + "Mingsu nho mix dâu size L loại đặc";
+                    dongia.Add(102000 * parsedValue);
+                    price = 102000 * parsedValue;
+
+                }
                 else if (gaCay == true && khoaitay.Checked == true)
                 {
                     var garancaykhoaitay = new PotatoChick(new SpicyFlavor(new Chicken()));
@@ -625,44 +704,26 @@ namespace DesignPatternMidterm.View
 
         private void thanhToan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Số tiền bạn cần thanh toán là: " + thanhtien.Text + " VNĐ" +". Vui lòng chuẩn bị đủ tiền để thanh toán cho shipper.");
+            this.Hide();
+            Payment payForm = new Payment();
+            payForm.setMoney(dongia[0]);
+            payForm.ShowDialog();
+            this.Show();
             thanhtien.Text = "";
-            pickFood.Text = "";
             dongia.Clear();
-            cancelForm.Enabled = false;
-            cancelMenu.Enabled = false;
-
-            gaPhoMai = false;
-            gaCay = false;
-            pizzaHaisan = false;
-            pizzaThapcam = false;
-            thaido = false;
-            thaixanh = false;
-            pepsilemon = false;
-            pepsinormal = false;
-
-            tatTopping.execute();
-
-
-            disableTopping.execute();
-
-
-            batMon.execute();
-
-            addMenu.Enabled = false;
-
-            anNut.execute();
-
-            thanhToan.Hide();
-
-
-
-            mauNut.execute();
-
-            // Hủy cái bảng
-            listMon.Clear();
-            orderGrid.DataSource = "";
-            count = 0;
+            pickFood.Text = "";
+            do
+            {
+                foreach (DataGridViewRow row in orderGrid.Rows)
+                {
+                    try
+                    {
+                        orderGrid.Rows.Remove(row);
+                    }
+                    catch (Exception) { }
+                }
+            } while (orderGrid.Rows.Count > 1);
+            thanhToan.Enabled = false;
 
         }
 
@@ -677,6 +738,63 @@ namespace DesignPatternMidterm.View
             //close form and open ManageScreen
             this.Hide();
             
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pickFood.Text = pickFood.Text + " + Bingsu";
+            addMenu.Enabled = false;
+        }
+
+        private void xoaiMixDau_CheckedChanged(object sender, EventArgs e)
+        {
+            pickFood.Text = pickFood.Text + " + xoaiMixDau";
+            nhoMixDau.Enabled = false;s
+            addMenu.Enabled = false;
+        }
+
+        private void tuoi_CheckedChanged(object sender, EventArgs e)
+        {
+            pickFood.Text = pickFood.Text + " + Tươi";
+            dac.Enabled = false;
+            addMenu.Enabled = true;
+        }
+
+        private void m_CheckedChanged(object sender, EventArgs e)
+        {
+            pickFood.Text = pickFood.Text + " + size M";
+            //disable button l
+            l.Enabled = false;
+            addMenu.Enabled = false;
+        }
+
+        private void nhoMixDau_CheckedChanged(object sender, EventArgs e)
+        {
+            pickFood.Text = pickFood.Text + " + Nho mix dâu";
+            //disable button l
+            xoaiMixDau.Enabled = false;
+            addMenu.Enabled = false;
+        }
+
+        private void l_CheckedChanged(object sender, EventArgs e)
+        {
+            pickFood.Text = pickFood.Text + " + size L";
+            //disable button l
+            m.Enabled = false;
+            addMenu.Enabled = false;
+        }
+
+        private void dac_CheckedChanged(object sender, EventArgs e)
+        {
+            pickFood.Text = pickFood.Text + " + Loại đặc";
+            //disable button l
+            tuoi.Enabled = false;
+            addMenu.Enabled = true;
         }
 
         private void khoaitay_CheckedChanged(object sender, EventArgs e)

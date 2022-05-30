@@ -46,17 +46,17 @@
             this.panel1.Controls.Add(this.btnManagerStaff);
             this.panel1.Controls.Add(this.btnKitchen);
             this.panel1.Controls.Add(this.btnOrder);
-            this.panel1.Location = new System.Drawing.Point(299, 101);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(269, 38);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(317, 496);
+            this.panel1.Size = new System.Drawing.Size(277, 370);
             this.panel1.TabIndex = 1;
             // 
             // btnManage
             // 
-            this.btnManage.Location = new System.Drawing.Point(0, 395);
+            this.btnManage.Location = new System.Drawing.Point(0, 296);
+            this.btnManage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManage.Name = "btnManage";
-            this.btnManage.Size = new System.Drawing.Size(317, 100);
+            this.btnManage.Size = new System.Drawing.Size(277, 75);
             this.btnManage.TabIndex = 13;
             this.btnManage.Text = "Quản lý tài khoản";
             this.btnManage.UseVisualStyleBackColor = true;
@@ -65,10 +65,9 @@
             // btnTable
             // 
             this.btnTable.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTable.Location = new System.Drawing.Point(0, 300);
-            this.btnTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTable.Location = new System.Drawing.Point(0, 225);
             this.btnTable.Name = "btnTable";
-            this.btnTable.Size = new System.Drawing.Size(317, 100);
+            this.btnTable.Size = new System.Drawing.Size(277, 75);
             this.btnTable.TabIndex = 9;
             this.btnTable.Text = "Quản lí bàn";
             this.btnTable.UseVisualStyleBackColor = true;
@@ -77,10 +76,9 @@
             // btnManagerStaff
             // 
             this.btnManagerStaff.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManagerStaff.Location = new System.Drawing.Point(0, 200);
-            this.btnManagerStaff.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnManagerStaff.Location = new System.Drawing.Point(0, 150);
             this.btnManagerStaff.Name = "btnManagerStaff";
-            this.btnManagerStaff.Size = new System.Drawing.Size(317, 100);
+            this.btnManagerStaff.Size = new System.Drawing.Size(277, 75);
             this.btnManagerStaff.TabIndex = 8;
             this.btnManagerStaff.Text = "Quản lí nhân viên";
             this.btnManagerStaff.UseVisualStyleBackColor = true;
@@ -89,10 +87,9 @@
             // btnKitchen
             // 
             this.btnKitchen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKitchen.Location = new System.Drawing.Point(0, 100);
-            this.btnKitchen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnKitchen.Location = new System.Drawing.Point(0, 75);
             this.btnKitchen.Name = "btnKitchen";
-            this.btnKitchen.Size = new System.Drawing.Size(317, 100);
+            this.btnKitchen.Size = new System.Drawing.Size(277, 75);
             this.btnKitchen.TabIndex = 7;
             this.btnKitchen.Text = "Khu Bếp";
             this.btnKitchen.UseVisualStyleBackColor = true;
@@ -102,9 +99,8 @@
             // 
             this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOrder.Location = new System.Drawing.Point(0, 0);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(317, 100);
+            this.btnOrder.Size = new System.Drawing.Size(277, 75);
             this.btnOrder.TabIndex = 5;
             this.btnOrder.Text = "Đặt Món";
             this.btnOrder.UseVisualStyleBackColor = true;
@@ -113,9 +109,9 @@
             // lbLogout
             // 
             this.lbLogout.AutoSize = true;
-            this.lbLogout.Location = new System.Drawing.Point(11, 51);
+            this.lbLogout.Location = new System.Drawing.Point(10, 38);
             this.lbLogout.Name = "lbLogout";
-            this.lbLogout.Size = new System.Drawing.Size(77, 20);
+            this.lbLogout.Size = new System.Drawing.Size(61, 15);
             this.lbLogout.TabIndex = 9;
             this.lbLogout.Text = "Đăng xuất";
             this.lbLogout.Click += new System.EventHandler(this.lbLogout_Click);
@@ -123,21 +119,20 @@
             // lbIntro
             // 
             this.lbIntro.AutoSize = true;
-            this.lbIntro.Location = new System.Drawing.Point(11, 19);
+            this.lbIntro.Location = new System.Drawing.Point(10, 14);
             this.lbIntro.Name = "lbIntro";
-            this.lbIntro.Size = new System.Drawing.Size(50, 20);
+            this.lbIntro.Size = new System.Drawing.Size(38, 15);
             this.lbIntro.TabIndex = 10;
             this.lbIntro.Text = "label1";
             // 
             // ManageScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(938, 707);
+            this.ClientSize = new System.Drawing.Size(821, 530);
             this.Controls.Add(this.lbIntro);
             this.Controls.Add(this.lbLogout);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ManageScreen";
             this.Text = "ManageScreen";
             this.Load += new System.EventHandler(this.ManageScreen_Load);

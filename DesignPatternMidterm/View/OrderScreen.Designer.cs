@@ -62,17 +62,29 @@
             this.banhFlan = new System.Windows.Forms.CheckBox();
             this.tranChau = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.dac = new System.Windows.Forms.CheckBox();
+            this.tuoi = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.l = new System.Windows.Forms.CheckBox();
+            this.m = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.nhoMixDau = new System.Windows.Forms.CheckBox();
+            this.xoaiMixDau = new System.Windows.Forms.CheckBox();
+            this.type = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.orderGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // orderGrid
             // 
             this.orderGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.orderGrid.Location = new System.Drawing.Point(677, 40);
+            this.orderGrid.Location = new System.Drawing.Point(986, 31);
             this.orderGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.orderGrid.Name = "orderGrid";
             this.orderGrid.RowHeadersWidth = 51;
@@ -82,7 +94,7 @@
             // 
             // thanhtien
             // 
-            this.thanhtien.Location = new System.Drawing.Point(893, 468);
+            this.thanhtien.Location = new System.Drawing.Point(1371, 480);
             this.thanhtien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.thanhtien.Name = "thanhtien";
             this.thanhtien.Size = new System.Drawing.Size(126, 27);
@@ -94,7 +106,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(793, 468);
+            this.label1.Location = new System.Drawing.Point(1272, 480);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 28);
             this.label1.TabIndex = 15;
@@ -103,7 +115,7 @@
             // thanhToan
             // 
             this.thanhToan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.thanhToan.Location = new System.Drawing.Point(893, 512);
+            this.thanhToan.Location = new System.Drawing.Point(1371, 524);
             this.thanhToan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.thanhToan.Name = "thanhToan";
             this.thanhToan.Size = new System.Drawing.Size(127, 77);
@@ -205,7 +217,7 @@
             this.groupBox2.Controls.Add(this.tuongca);
             this.groupBox2.Controls.Add(this.tuongot);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(424, 40);
+            this.groupBox2.Location = new System.Drawing.Point(738, 31);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -280,7 +292,7 @@
             this.cancelForm.BackColor = System.Drawing.Color.Red;
             this.cancelForm.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cancelForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cancelForm.Location = new System.Drawing.Point(945, 734);
+            this.cancelForm.Location = new System.Drawing.Point(1241, 731);
             this.cancelForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cancelForm.Name = "cancelForm";
             this.cancelForm.Size = new System.Drawing.Size(115, 68);
@@ -421,7 +433,7 @@
             this.groupBox4.Controls.Add(this.banhFlan);
             this.groupBox4.Controls.Add(this.tranChau);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox4.Location = new System.Drawing.Point(424, 245);
+            this.groupBox4.Location = new System.Drawing.Point(738, 236);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -471,7 +483,7 @@
             this.button1.BackColor = System.Drawing.Color.DarkGray;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(1087, 734);
+            this.button1.Location = new System.Drawing.Point(1383, 731);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 68);
@@ -480,11 +492,145 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.dac);
+            this.groupBox5.Controls.Add(this.tuoi);
+            this.groupBox5.Controls.Add(this.label4);
+            this.groupBox5.Controls.Add(this.l);
+            this.groupBox5.Controls.Add(this.m);
+            this.groupBox5.Controls.Add(this.label3);
+            this.groupBox5.Controls.Add(this.nhoMixDau);
+            this.groupBox5.Controls.Add(this.xoaiMixDau);
+            this.groupBox5.Controls.Add(this.type);
+            this.groupBox5.Controls.Add(this.button2);
+            this.groupBox5.Location = new System.Drawing.Point(403, 40);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox5.Size = new System.Drawing.Size(328, 397);
+            this.groupBox5.TabIndex = 30;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Best Seller";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            // 
+            // dac
+            // 
+            this.dac.AutoSize = true;
+            this.dac.Location = new System.Drawing.Point(213, 307);
+            this.dac.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dac.Name = "dac";
+            this.dac.Size = new System.Drawing.Size(57, 24);
+            this.dac.TabIndex = 9;
+            this.dac.Text = "Đặc";
+            this.dac.UseVisualStyleBackColor = true;
+            this.dac.CheckedChanged += new System.EventHandler(this.dac_CheckedChanged);
+            // 
+            // tuoi
+            // 
+            this.tuoi.AutoSize = true;
+            this.tuoi.Location = new System.Drawing.Point(65, 311);
+            this.tuoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tuoi.Name = "tuoi";
+            this.tuoi.Size = new System.Drawing.Size(61, 24);
+            this.tuoi.TabIndex = 8;
+            this.tuoi.Text = "Tươi";
+            this.tuoi.UseVisualStyleBackColor = true;
+            this.tuoi.CheckedChanged += new System.EventHandler(this.tuoi_CheckedChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(32, 312);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 20);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Sữa:";
+            // 
+            // l
+            // 
+            this.l.AutoSize = true;
+            this.l.Location = new System.Drawing.Point(213, 259);
+            this.l.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.l.Name = "l";
+            this.l.Size = new System.Drawing.Size(38, 24);
+            this.l.TabIndex = 6;
+            this.l.Text = "L";
+            this.l.UseVisualStyleBackColor = true;
+            this.l.CheckedChanged += new System.EventHandler(this.l_CheckedChanged);
+            // 
+            // m
+            // 
+            this.m.AutoSize = true;
+            this.m.Location = new System.Drawing.Point(65, 263);
+            this.m.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.m.Name = "m";
+            this.m.Size = new System.Drawing.Size(44, 24);
+            this.m.TabIndex = 5;
+            this.m.Text = "M";
+            this.m.UseVisualStyleBackColor = true;
+            this.m.CheckedChanged += new System.EventHandler(this.m_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 264);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Size:";
+            // 
+            // nhoMixDau
+            // 
+            this.nhoMixDau.AutoSize = true;
+            this.nhoMixDau.Location = new System.Drawing.Point(213, 217);
+            this.nhoMixDau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nhoMixDau.Name = "nhoMixDau";
+            this.nhoMixDau.Size = new System.Drawing.Size(116, 24);
+            this.nhoMixDau.TabIndex = 3;
+            this.nhoMixDau.Text = "Nho mix dâu";
+            this.nhoMixDau.UseVisualStyleBackColor = true;
+            this.nhoMixDau.CheckedChanged += new System.EventHandler(this.nhoMixDau_CheckedChanged);
+            // 
+            // xoaiMixDau
+            // 
+            this.xoaiMixDau.AutoSize = true;
+            this.xoaiMixDau.Location = new System.Drawing.Point(65, 221);
+            this.xoaiMixDau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.xoaiMixDau.Name = "xoaiMixDau";
+            this.xoaiMixDau.Size = new System.Drawing.Size(118, 24);
+            this.xoaiMixDau.TabIndex = 2;
+            this.xoaiMixDau.Text = "Xoài mix dâu";
+            this.xoaiMixDau.UseVisualStyleBackColor = true;
+            this.xoaiMixDau.CheckedChanged += new System.EventHandler(this.xoaiMixDau_CheckedChanged);
+            // 
+            // type
+            // 
+            this.type.AutoSize = true;
+            this.type.Location = new System.Drawing.Point(32, 223);
+            this.type.Name = "type";
+            this.type.Size = new System.Drawing.Size(29, 20);
+            this.type.TabIndex = 1;
+            this.type.Text = "Vị: ";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(32, 39);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(289, 144);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Mingsu ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // OrderScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1214, 815);
+            this.ClientSize = new System.Drawing.Size(1527, 815);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -510,6 +656,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -551,5 +699,16 @@
         private CheckBox banhFlan;
         private CheckBox tranChau;
         private Button button1;
+        private GroupBox groupBox5;
+        private Button button2;
+        private CheckBox dac;
+        private CheckBox tuoi;
+        private Label label4;
+        private CheckBox l;
+        private CheckBox m;
+        private Label label3;
+        private CheckBox nhoMixDau;
+        private CheckBox xoaiMixDau;
+        private Label type;
     }
 }
