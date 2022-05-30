@@ -76,6 +76,7 @@ namespace DesignPatternMidterm.View
             else
             {
                 modify.InsertAccount(txtUsername.Text, txtPassword.Text, txtEmail.Text);
+                MessageBox.Show("Thêm tài khoản thành công");
                 //reload form and data in dataGridView
                 listUser();
                 //clear textbox
@@ -97,6 +98,7 @@ namespace DesignPatternMidterm.View
             if (dialogResult == DialogResult.Yes)
             {
                 modify.DeleteAccount(txtEmail.Text);
+                MessageBox.Show("Xóa tài khoản thành công");
                 listUser();
                 //clear textbox
                 txtUsername.Text = "";
@@ -127,6 +129,7 @@ namespace DesignPatternMidterm.View
             }
             //update account in database
             modify.UpdateAccount(txtUsername.Text, txtPassword.Text, txtEmail.Text);
+            MessageBox.Show("Cập nhật tài khoản thành công");
             listUser();
         }
 

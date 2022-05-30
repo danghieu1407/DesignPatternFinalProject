@@ -91,8 +91,8 @@ namespace Demo.View
         {
             int x = int.Parse(TableID.Text);
 
-           tableContext.SetStatus(x, new TableOrderedState());
-          
+            tableContext.SetStatus(x, new TableOrderedState());
+            MessageBox.Show("Cập nhật trạng thái thành công");
             LoadTable();
         }
 
@@ -105,7 +105,7 @@ namespace Demo.View
         {
             int x = int.Parse(TableID.Text);
             this.tableContext.SetStatus(x, new TableUsedState());
-            
+            MessageBox.Show("Cập nhật trạng thái thành công");
             LoadTable();
 
         }
@@ -114,7 +114,7 @@ namespace Demo.View
         {
             int x = int.Parse(TableID.Text);
             this.tableContext.SetStatus(x,new TableFreeState());
-            
+            MessageBox.Show("Cập nhật trạng thái thành công");
             LoadTable();
         }
 
@@ -132,6 +132,10 @@ namespace Demo.View
         {
             string Query = "insert BanAn(name_table, status_table) values ('" + name_table.Text+"','0') ";
             DatabaseProvide.getInstance().Query(Query);
+            //notification add table success
+            //ShowDialog("Add table success");
+            MessageBox.Show("Thêm bàn thành công");
+
             LoadTable();
         }
 
@@ -139,6 +143,7 @@ namespace Demo.View
         {
             string Query = "Update BanAn set name_table = '" + name_table.Text + "' where id_table = '"+ TableID.Text + "'";
             DatabaseProvide.getInstance().Query(Query);
+            MessageBox.Show("Chỉnh sửa bàn thành công");
             LoadTable();
         }
 
@@ -146,6 +151,7 @@ namespace Demo.View
         {
             string Query = "DELETE FROM BanAn WHERE id_table = '"+ TableID.Text + "' ";
             DatabaseProvide.getInstance().Query(Query);
+            MessageBox.Show("Xóa bàn thành công");
             LoadTable();
         }
     }

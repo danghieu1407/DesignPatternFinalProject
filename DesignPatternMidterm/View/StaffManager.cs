@@ -95,6 +95,7 @@ namespace Demo.View
                 
                 string query = "insert Account(email, name) values('"+ EmailText.Text + "', '"+ NameText.Text + "')";
                 DatabaseProvide.getInstance().Query(query);
+                MessageBox.Show("Thêm nhân viên thành công");
                 EmailText.Text = "";
                 NameText.Text = "";
                 RoleText.Text = "";
@@ -109,6 +110,7 @@ namespace Demo.View
         {
             string query = "Update Account set role = '2' where email ='" + EmailText.Text + "'";
             DatabaseProvide.getInstance().Query(query);
+            MessageBox.Show("Thăng cấp nhân viên thành công");
             LoadStaffTable();
         }
 
@@ -123,6 +125,7 @@ namespace Demo.View
         {
             string query = "Update Account set name = '"+ NameText.Text + "' where email ='" + EmailText.Text + "'";
             DatabaseProvide.getInstance().Query(query);
+            MessageBox.Show("Chỉnh sửa thông tin nhân viên thành công");
             LoadStaffTable();
         }
 
@@ -130,12 +133,14 @@ namespace Demo.View
         {
             string Query = "DELETE FROM Account WHERE email = '" + EmailText.Text + "' ";
             DatabaseProvide.getInstance().Query(Query);
+            MessageBox.Show("Sa thải nhân viên thành công");
             LoadStaffTable();                   
         }
 
         private void ReplaceMess_Click(object sender, EventArgs e)
         {
             string text = SendMess.Text;
+            MessageBox.Show("Đăng thông báo thành công");
             notification.ReplaceNotification(text);
         }
 
